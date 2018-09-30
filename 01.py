@@ -78,10 +78,10 @@ responsename1 = cl.getProfile().displayName
 
 print("---LOGIN SUCCES---")
 
-creator = ["u0237b0ec326fc36a91743df4a1ad2591"]
-owner = ["u0237b0ec326fc36a91743df4a1ad2591"]
-admin = ["u0237b0ec326fc36a91743df4a1ad2591"]
-staff = ["u0237b0ec326fc36a91743df4a1ad2591"]
+creator = ["u48b4ebd2407c6bb88df30b2645ddaa96"]
+owner = ["u48b4ebd2407c6bb88df30b2645ddaa96"]
+admin = ["u48b4ebd2407c6bb88df30b2645ddaa96"]
+staff = ["u48b4ebd2407c6bb88df30b2645ddaa96"]
 
 KAC = [cl]
 ABC = [cl]
@@ -150,9 +150,7 @@ wait = {
     "bots":{},
     "addbots":False,
     "dellbots":False,
-    "blacklist":{
-        "u5a0b4bb5d3a6d48aca8473326062af75": True
-    },
+    "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
     "Talkblacklist":{},
