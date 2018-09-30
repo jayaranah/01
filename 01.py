@@ -1981,7 +1981,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "•AR SELF\n• Nama : "
+                                xpesan =  "•AR SELFBOT\n• Nama : "
                                 ret_ = "• Group : {} Group".format(str(len(grouplist)))
                                 ret_ += "\n• Teman : {} Teman".format(str(len(contactlist)))
                                 ret_ += "\n• Blokir : {} Blokir".format(str(len(blockedlist)))
@@ -2704,7 +2704,7 @@ def bot(op):
                                    a = a + 1
                                    end = "\n"
                                    ma += "╠ " + str(a) + ". " +G.name+ "\n"
-                               cl.sendMessage(msg.to,"╔══[ GROUP LIST ]\n║\n"+ma+"║\n╚══[ Total「"+str(len(gid))+"」Groups ]")
+                               cl.sendMessage(msg.to,"╔══♦ GROUP LIST ♦\n║\n"+ma+"║\n╚══[ Total「"+str(len(gid))+"」Groups ]")
 
                         elif cmd == "gruplist1":
                             if msg._from in admin:
@@ -3043,7 +3043,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     me += str(a) + ". " +cl.getGroup(group).name + "\n"
-                                cl.sendMessage(msg.to,"「 Daftar Protection 」\n\n「✭」 PROTECT URL :\n"+ma+"\n「✭」 PROTECT KICK :\n"+mb+"\n「✭」 PROTECT JOIN :\n"+md+"\n「✭」 PROTECT CANCEL:\n"+mc+"\n「✭」 PROTECT INVITE:\n"+me+"\nTotal「%s」Grup diamankan" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
+                                cl.sendMessage(msg.to,"♦LIST PROTRCTION ♦\n\n♦ PROTECT URL :\n"+ma+"\n♦ PROTECT KICK :\n"+mb+"\n♦ PROTECT JOIN :\n"+md+"\n♦ PROTECT CANCEL:\n"+mc+"\n♦ PROTECT INVITE:\n"+me+"\nTOTAL「%s」GROUP DI PROTECT" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
 
                         elif cmd == "respon":
                           if wait["selfbot"] == True:
@@ -3392,6 +3392,7 @@ def bot(op):
                                             cl.sendMessage(msg.to, str(ret_))
                                             cl.sendAudioWithURL(msg.to,audio)
                         elif cmd.startswith("smule "):
+                          if msg._from in admin:			
                             if '/' in text:
                                 sep = text.split(".com/")
                                 x = len(sep)
@@ -3408,14 +3409,14 @@ def bot(op):
                                     yyk = mp3['href']
                                     aud = yyk.replace("https://adf.ly/7737506/","")
                                     audio = aud.replace("\n","")
-                                    client.sendMessage(to,"Type~Audio\njudul~"+ret_+"\n\nLoading...")
-                                    client.sendAudioWithURL(msg.to, audio)
+                                    cl.sendMessage(to,"Type~Audio\njudul~"+ret_+"\n\nLoading...")
+                                    cl.sendAudioWithURL(msg.to, audio)
                                 else:
                                     mp4 = data.select("a[href*=7737506]")[1]
                                     yoyok = mp4['href']
                                     video = yoyok.replace("https://adf.ly/7737506/","")
-                                    client.sendMessage(to,"Type~Video\njudul~"+ret_+"\n\nLoading...")
-                                    client.sendVideoWithURL(msg.to,video)					
+                                    cl.sendMessage(to,"Type~Video\njudul~"+ret_+"\n\nLoading...")
+                                    cl.sendVideoWithURL(msg.to,video)					
  
                         elif cmd.startswith("get-fs "):
                           if msg._from in admin:
