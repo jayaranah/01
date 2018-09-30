@@ -2119,6 +2119,19 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Zmid}
                                cl.sendMessage1(msg)
+                        elif cmd == "mention":
+                            group = cl.getGroup(msg.to)
+                            nama = [contact.mid for contact in group.members]
+                            k = len(nama)//20
+                            for a in range(k+1):
+                                txt = u''
+                                s=0
+                                b=[]
+                                for i in group.members[a*20 : (a+1)*20]:
+                                    b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
+                                    s += 7
+                                    txt += u'@x\n'
+                                cl.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)			
 
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
