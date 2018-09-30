@@ -2119,20 +2119,7 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Zmid}
                                cl.sendMessage1(msg)
-                        elif cmd == "mention":
-                            group = cl.getGroup(msg.to)
-                            nama = [contact.mid for contact in group.members]
-                            k = len(nama)//20
-                            for a in range(k+1):
-                                txt = u''
-                                s=0
-                                b=[]
-                                for i in group.members[a*20 : (a+1)*20]:
-                                    b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
-                                    s += 7
-                                    txt += u'@x\n'
-                                cl.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)			
-
+                        
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2935,6 +2922,77 @@ def bot(op):
                                 sw.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
+                        elif cmd == "mention1" or text.lower() == '😆':
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               group = cl.getGroup(msg.to)
+                               nama = [contact.mid for contact in group.members]
+                               nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
+                               if jml <= 20:
+                                   mentionMembers(msg.to, nama)
+                               if jml > 20 and jml < 20:
+                                   for i in range (0, 20):
+                                       nm1 += [nama[i]]
+                                   mentionMembers(msg.to, nm1)
+                                   for j in range (20, len(nama)-1):
+                                       nm2 += [nama[j]]
+                                   mentionMembers(msg.to, nm2)
+                               if jml > 20 and jml < 40:
+                                   for i in range (0, 20):
+                                       nm1 += [nama[i]]
+                                   mentionMembers(msg.to, nm1)
+                                   for j in range (20, 40):
+                                       nm2 += [nama[j]]
+                                   mentionMembers(msg.to, nm2)
+                                   for k in range (40, len(nama)-1):
+                                       nm3 += [nama[k]]
+                                   mentionMembers(msg.to, nm3)
+                               if jml > 40 and jml < 60:
+                                   for i in range (0, 20):
+                                       nm1 += [nama[i]]
+                                   mentionMembers(msg.to, nm1)
+                                   for j in range (20, 40):
+                                       nm2 += [nama[j]]
+                                   mentionMembers(msg.to, nm2)
+                                   for k in range (40, 60):
+                                       nm3 += [nama[k]]
+                                   mentionMembers(msg.to, nm3)
+                                   for l in range (60, len(nama)-1):
+                                       nm4 += [nama[l]]
+                                   mentionMembers(msg.to, nm4)
+                               if jml > 60 and jml < 80:
+                                   for i in range (0, 20):
+                                       nm1 += [nama[i]]
+                                   mentionMembers(msg.to, nm1)
+                                   for j in range (20, 40):
+                                       nm2 += [nama[j]]
+                                   mentionMembers(msg.to, nm2)
+                                   for k in range (40, 60):
+                                       nm3 += [nama[k]]
+                                   mentionMembers(msg.to, nm3)
+                                   for l in range (60, 80):
+                                       nm4 += [nama[l]]
+                                   mentionMembers(msg.to, nm4)
+                                   for m in range (80, len(nama)-1):
+                                       nm5 += [nama[m]]
+                                   mentionMembers(msg.to, nm5)
+                               if jml > 80 and jml < 100:
+                                   for i in range (0, 20):
+                                       nm1 += [nama[i]]
+                                   mentionMembers(msg.to, nm1)
+                                   for j in range (20, 40):
+                                       nm2 += [nama[j]]
+                                   mentionMembers(msg.to, nm2)
+                                   for k in range (40, 60):
+                                       nm3 += [nama[k]]
+                                   mentionMembers(msg.to, nm3)
+                                   for l in range (60, 80):
+                                       nm4 += [nama[l]]
+                                   mentionMembers(msg.to, nm4)
+                                   for m in range (80, 100):
+                                       nm5 += [nama[m]]
+                                   mentionMembers(msg.to, nm5)
+
                         elif cmd == "tagall" or text.lower() == 'tagall':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
