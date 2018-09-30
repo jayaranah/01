@@ -1604,7 +1604,7 @@ def bot(op):
                                   wait["invite"] = False
                                   break
                              except:
-                                  cl.sendText(msg.to,"Anda terkena limit")
+                                  cl.sendMessage(msg.to,"Anda terkena limit")
                                   wait["invite"] = False
                                   break
 #ADD Bots
@@ -1975,7 +1975,7 @@ def bot(op):
                                 eltime = time.time() - mulai
                                 bot = runtime(eltime)
                                 start = time.time()
-                                cl.sendMessage("u054c3692f90083a5b1ad23e4a663f676", '.')
+                                cl.sendMessage("u48b4ebd2407c6bb88df30b2645ddaa96", '.')
                                 elapsed_time = time.time() - start
                                 ryan = cl.getContact(mid)
                                 zx = ""
@@ -2050,7 +2050,7 @@ def bot(op):
                                     a = channel.getProfileCoverURL(mid=u)
                                     cl.sendImageWithURL(receiver, a)
                                 except Exception as e:
-                                    cl.sendText(receiver, str(e))
+                                    cl.sendMessage(receiver, str(e))
 
                         elif ("Sticker: " in msg.text):
                           if wait["selfbot"] == True:
@@ -2060,11 +2060,11 @@ def bot(op):
                                     query = int(query)
                                     if type(query) == int:
                                         cl.sendImageWithURL(receiver, 'https://stickershop.line-scdn.net/stickershop/v1/product/'+str(query)+'/ANDROID/main.png')
-                                        cl.sendText(receiver, 'https://line.me/S/sticker/'+str(query))
+                                        cl.sendMessage(receiver, 'https://line.me/S/sticker/'+str(query))
                                     else:
-                                        cl.sendText(receiver, 'gunakan key sticker angka bukan huruf')
+                                        cl.sendMessage(receiver, 'gunakan key sticker angka bukan huruf')
                                 except Exception as e:
-                                    cl.sendText(receiver, str(e))
+                                    cl.sendMessage(receiver, str(e))
 
                         elif "/ti/g/" in msg.text.lower():
                            if msg._from in admin:
@@ -2201,7 +2201,7 @@ def bot(op):
                         elif cmd == "restart":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "memperbarui \Nama ", "\nTunggu sebentar...")
+                               sendMention(msg.to, sender, "memperbarui \nNama ", "\nTunggu sebentar...")
                                Setmain["restartPoint"] = msg.to
                                restartBot()
                             
@@ -2243,7 +2243,7 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                cl.sendMessage(msg.to, "「 Group Info 」\n「✭」 Nama Group : {}".format(G.name)+ "\n「✭」 ID Group : {}".format(G.id)+ "\n「✭」 Pembuat : {}".format(G.creator.displayName)+ "\n「✭」 Waktu Dibuat : {}".format(str(timeCreated))+ "\n「✭」 Jumlah Member : {}".format(str(len(G.members)))+ "\n「✭」 Jumlah Pending : {}".format(gPending)+ "\n「✭」 Group Qr : {}".format(gQr)+ "\n「✭」 Group Ticket : {}".format(gTicket))
+                                cl.sendMessage(msg.to, " ♦Group Info♦ \n\n♦ Nama Group : {}".format(G.name)+ "\n♦ ID Group : {}".format(G.id)+ "\n♦ Pembuat : {}".format(G.creator.displayName)+ "\n♦ Waktu Dibuat : {}".format(str(timeCreated))+ "\n♦ Jumlah Member : {}".format(str(len(G.members)))+ "\n♦ Jumlah Pending : {}".format(gPending)+ "\n♦ Group Qr : {}".format(gQr)+ "\n♦ Group Ticket : {}".format(gTicket))
                                 cl.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                                 cl.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
@@ -2274,16 +2274,16 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                ret_ += "「 Group Info 」"
-                                ret_ += "\n「✭」 Nama Group : {}".format(G.name)
-                                ret_ += "\n「✭」 ID Group : {}".format(G.id)
-                                ret_ += "\n「✭」 Pembuat : {}".format(gCreator)
-                                ret_ += "\n「✭」 Waktu Dibuat : {}".format(str(timeCreated))
-                                ret_ += "\n「✭」 Jumlah Member : {}".format(str(len(G.members)))
-                                ret_ += "\n「✭」 Jumlah Pending : {}".format(gPending)
-                                ret_ += "\n「✭」 Group Qr : {}".format(gQr)
-                                ret_ += "\n「✭」 Group Ticket : {}".format(gTicket)
-                                ret_ += "\n「✭」 Picture Url : http://dl.profile.line-cdn.net/{}".format(G.pictureStatus)
+                                ret_ += "♦ Group Info ♦"
+                                ret_ += "\n♦ Nama Group : {}".format(G.name)
+                                ret_ += "\n♦ ID Group : {}".format(G.id)
+                                ret_ += "\n♦ Pembuat : {}".format(gCreator)
+                                ret_ += "\n♦ Waktu Dibuat : {}".format(str(timeCreated))
+                                ret_ += "\n♦ Jumlah Member : {}".format(str(len(G.members)))
+                                ret_ += "\n♦ Jumlah Pending : {}".format(gPending)
+                                ret_ += "\n♦ Group Qr : {}".format(gQr)
+                                ret_ += "\n♦ Group Ticket : {}".format(gTicket)
+                                ret_ += "\n♦ Picture Url : http://dl.profile.line-cdn.net/{}".format(G.pictureStatus)
                                 ret_ += ""
                                 cl.sendMessage(to, str(ret_))
                                 cl.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
@@ -2644,8 +2644,8 @@ def bot(op):
                                 ret_ = ""
                                 for mem in G.members:
                                     no += 1
-                                    ret_ += "\n " "「✭」 "+ str(no) + ". " + mem.displayName
-                                cl.sendMessage(to,"「✭」 Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n「Total %i Members」" % len(G.members))
+                                    ret_ += "\n " "♦ "+ str(no) + ". " + mem.displayName
+                                cl.sendMessage(to,"♦ Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n「Total %i Members」" % len(G.members))
                             except: 
                                 pass
 
@@ -3088,7 +3088,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                cl.sendText(msg.to, "Bye bye fams "+str(G.name))
+                                cl.sendMessage(msg.to, "Bye bye fams "+str(G.name))
                                 cl.leaveGroup(msg.to)
 
                         elif cmd.startswith("leave "):
@@ -3313,7 +3313,7 @@ def bot(op):
                                 else:
                                     cl.sendText(msg.to, "User kosong...")
                             else:
-                                cl.sendText(msg.to, "Ketik lurking on dulu")
+                                cl.sendMessage(msg.to, "Ketik lurking on dulu")
 
                         elif cmd == "sider on":
                           if wait["selfbot"] == True:
@@ -3491,7 +3491,7 @@ def bot(op):
                                     cl.sendText(msg.to,hasil)
                                     cl.sendImageWithURL(msg.to,gambar["url"])
                                 except Exception as e:
-                                    cl.sendText(msg.to," "+str(e))
+                                    cl.sendMessage(msg.to," "+str(e))
                                     
                         elif cmd.startswith("get-meme "):
                           if msg._from in admin:
@@ -3529,7 +3529,7 @@ def bot(op):
                                     no += 1
                                     hasil += "\n" + str(no) + ". " + str(aa["title"])
                                     ret_ = "\n\nSelanjutnya Get-gif {} | angka\nuntuk melihat detail video".format(str(search))
-                                cl.sendText(msg.to,hasil+ret_)
+                                cl.sendMessage(msg.to,hasil+ret_)
                             elif len(count) == 2:
                                 try:
                                     num = int(count[1])
@@ -3541,7 +3541,7 @@ def bot(op):
                                     dl = str(b["media"][0]["loopedmp4"]["url"])
                                     cl.sendVideoWithURL(msg.to,dl)
                                 except Exception as e:
-                                    cl.sendText(msg.to," "+str(e))                        
+                                    cl.sendMessage(msg.to," "+str(e))                        
                         
                         elif cmd.startswith("get-xxx "):
                           if msg._from in admin:
@@ -3558,7 +3558,7 @@ def bot(op):
                                     no += 1
                                     hasil += "\n"+str(no)+". "+str(aa["title"])+"\nDurasi : "+str(aa["duration"])
                                     ret_ = "\n\nSelanjutnya Get-xxx {} | angka\nuntuk melihat detail video".format(str(search))
-                                cl.sendText(msg.to,hasil+ret_)
+                                cl.sendMessage(msg.to,hasil+ret_)
                             elif len(count) == 2:
                                 try:
                                     num = int(count[1])
@@ -3581,7 +3581,7 @@ def bot(op):
                                     cl.sendImage(msg.to,path)
                                     cl.sendVideoWithURL(msg.to, data["data"]["url"])
                                 except Exception as e:
-                                    cl.sendText(msg.to," "+str(e))
+                                    cl.sendMessage(msg.to," "+str(e))
 
                         elif cmd.startswith("get-sholat "):
                           if msg._from in admin:
@@ -3686,10 +3686,10 @@ def bot(op):
                                    data = json.loads(data)
                                    start = timeit.timeit()
                                    ret_ = "「 Lirik Search 」"
-                                   ret_ += "\n「✭」 Judul : {}".format(str(data["title"]))
-                                   ret_ += "\n「✭」 Time Taken : {}".format(str(start))
+                                   ret_ += "\n♦ Judul : {}".format(str(data["title"]))
+                                   ret_ += "\n♦ Time Taken : {}".format(str(start))
                                    ret_ += "\n\n{}".format(str(data["lyric"]))
-                                   cl.sendText(msg.to, str(ret_))
+                                   cl.sendMessage(msg.to, str(ret_))
 
                         elif cmd.startswith("musik "):
                             if msg._from in admin:
@@ -3809,9 +3809,9 @@ def bot(op):
                                     deskripsi = '\n┃ Deskripsi : ' + str(vid.description)
                                 cl.sendImageWithURL(msg.to, me)
                                 cl.sendAudioWithURL(msg.to, shi)
-                                cl.sendText(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
+                                cl.sendMessage(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
                             except Exception as e:
-                                cl.sendText(msg.to,str(e))
+                                cl.sendMessage(msg.to,str(e))
 
                         elif cmd.startswith("ytmp4: "):
                           if msg._from in admin:
@@ -3843,9 +3843,9 @@ def bot(op):
                                     rating = '\n┃ Rating : ' + str(vid.rating)
                                     deskripsi = '\n┃ Deskripsi : ' + str(vid.description)
                                 cl.sendVideoWithURL(msg.to, me)
-                                cl.sendText(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
+                                cl.sendMessage(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
                             except Exception as e:
-                                cl.sendText(msg.to,str(e))
+                                cl.sendMessage(msg.to,str(e))
                                 
                         elif cmd.startswith("get-image "):
                           if msg._from in admin:
@@ -3863,7 +3863,7 @@ def bot(op):
                                     path = random.choice(items)
                                     a = items.index(path)
                                     b = len(items)
-                                    cl.sendText(msg.to,"「 Google Image 」\nType : Search Image\nTime taken : %seconds" % (start))
+                                    cl.sendMessage(msg.to,"「 Google Image 」\nType : Search Image\nTime taken : %seconds" % (start))
                                     cl.sendImageWithURL(msg.to, str(path))
 
                         elif cmd.startswith("get-apk "):
@@ -4034,7 +4034,7 @@ def bot(op):
                                         no += 1                  
                                         hasil += "\n" + str(no) + ". Judul : " + str(news["title"]) + "\n • Deskripsi : " + str(news["detail"]) + "\n• Link: " + str(news["link"]) + "\n"
                                         hasil += "\n"
-                                   cl.sendText(msg.to, str(hasil))
+                                   cl.sendMessage(msg.to, str(hasil))
 
                         elif cmd.startswith("get-video "):
                           if msg._from in admin:
@@ -4057,7 +4057,7 @@ def bot(op):
                                           ret += "\n• Rating : {}".format(str(data["result"]["rating"]))
                                           ret += "\n• TimeTaken : {}".format(str(start))
                                           ret += "\n• Deskripsi : {}\n「 Waiting Encoding 」".format(str(data["result"]["description"]))
-                                          cl.sendText(msg.to, str(ret))
+                                          cl.sendMessage(msg.to, str(ret))
                                           cl.sendVideoWithURL(msg.to, str(vid))
 
                         elif cmd.startswith("get-mp3 "):
@@ -4081,7 +4081,7 @@ def bot(op):
                                           ret += "\n• Rating : {}".format(str(data["result"]["rating"]))
                                           ret += "\n• TimeTaken : {}".format(str(start))
                                           ret += "\n• Deskripsi : {}\n「 Waiting Encoding 」".format(str(data["result"]["description"]))
-                                          cl.sendText(msg.to, str(ret))
+                                          cl.sendMessage(msg.to, str(ret))
                                           cl.sendAudioWithURL(msg.to, str(aud))
 
                         elif cmd.startswith("get-instagram "):
@@ -4178,7 +4178,7 @@ def bot(op):
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 wait["limit"] = num
-                                cl.sendText(msg.to,"「 Status Spamcall 」\nBerhasil diubah jadi {} kali".format(str(strnum)))
+                                cl.sendMessage(msg.to,"「 Status Spamcall 」\nBerhasil diubah jadi {} kali".format(str(strnum)))
 
                         elif cmd.startswith("spamtag "):
                           if wait["selfbot"] == True:
@@ -4205,9 +4205,9 @@ def bot(op):
                                             try:
                                                 cl.sendMessage1(msg)
                                             except Exception as e:
-                                                cl.sendText(msg.to,str(e))
+                                                cl.sendMessage(msg.to,str(e))
                                     else:
-                                        cl.sendText(msg.to,"Jumlah melebihi 1000")
+                                        cl.sendMessage(msg.to,"Jumlah melebihi 1000")
                                         
                         elif cmd.startswith("panggil "):
                           if wait["selfbot"] == True:
@@ -4234,7 +4234,7 @@ def bot(op):
                                             try:
                                                 cl.sendMessage1(msg)
                                             except Exception as e:
-                                                cl.sendText(msg.to,str(e))
+                                                cl.sendMessage(msg.to,str(e))
 
                         elif cmd == "spamcall":
                           if wait["selfbot"] == True:
@@ -4254,14 +4254,14 @@ def bot(op):
                                 group = cl.getGroup(to)
                                 members = [mem.mid for mem in group.members]
                                 jumlah = int(strnum)
-                                cl.sendText(msg.to,"Undangan call grup {} sukses".format(str(strnum)))
+                                cl.sendMessage(msg.to,"Undangan call grup {} sukses".format(str(strnum)))
                                 if jumlah <= 1000:
                                    for x in range(jumlah):
                                    	try:
                                            call.acquireGroupCallRoute(to)
                                            call.inviteIntoGroupCall(to, contactIds=members)
                                    	except Exception as e:
-                                          cl.sendText(msg.to,str(e))
+                                          cl.sendMessage(msg.to,str(e))
 
                         elif 'Gift: ' in msg.text:
                           if wait["selfbot"] == True:
@@ -4270,7 +4270,7 @@ def bot(op):
                               korban2 = korban.split()
                               midd = korban2[0]
                               jumlah = int(korban2[1])
-                              cl.sendText(msg.to,"「 Spam Gift 」\nBerhasil spamgift {} kali".format(str(jumlah)))
+                              cl.sendMessage(msg.to,"「 Spam Gift 」\nBerhasil spamgift {} kali".format(str(jumlah)))
                               if jumlah <= 1000:
                                   for var in range(0,jumlah):
                                       cl.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
@@ -4308,9 +4308,9 @@ def bot(op):
                                 images[str(name.lower())] = ""
                                 f = codecs.open("image.json","w","utf-8")
                                 json.dump(images, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Silahkan kirim fotonya...") 
+                                cl.sendMessage(msg.to, "Silahkan kirim fotonya...") 
                             else:
-                                cl.sendText(msg.to, "Foto itu sudah dalam list") 
+                                cl.sendMessage(msg.to, "Foto itu sudah dalam list") 
                                 
                         elif cmd.startswith("dellimg "):
                           if msg._from in admin:
@@ -4322,9 +4322,9 @@ def bot(op):
                                 del images[str(name.lower())]
                                 f = codecs.open("image.json","w","utf-8")
                                 json.dump(images, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Berhasil menghapus {}".format( str(name.lower())))
+                                cl.sendMessage(msg.to, "Berhasil menghapus {}".format( str(name.lower())))
                             else:
-                                cl.sendText(msg.to, "Foto itu tidak ada dalam list") 
+                                cl.sendMessage(msg.to, "Foto itu tidak ada dalam list") 
                                  
                         elif text.lower() == "listimage":
                            if msg._from in admin:
@@ -4334,7 +4334,7 @@ def bot(op):
                                  no += 1
                                  ret_ += str(no) + ". " + image.title() + "\n"
                              ret_ += "\nTotal「{}」Images".format(str(len(images)))
-                             cl.sendText(to, ret_)
+                             cl.sendMessage(to, ret_)
 #=========== [ Add Video ] ============#                               
                         elif cmd.startswith("addvideo "):
                           if msg._from in admin:
@@ -4347,9 +4347,9 @@ def bot(op):
                                 videos[str(name.lower())] = ""
                                 f = codecs.open("video.json","w","utf-8")
                                 json.dump(videos, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Silahkan kirim videonya...") 
+                                cl.sendMessage(msg.to, "Silahkan kirim videonya...") 
                             else:
-                                cl.sendText(msg.to, "Video itu sudah dalam list") 
+                                cl.sendMessage(msg.to, "Video itu sudah dalam list") 
                                 
                         elif cmd.startswith("dellvideo "):
                           if msg._from in admin:
@@ -4361,9 +4361,9 @@ def bot(op):
                                 del videos[str(name.lower())]
                                 f = codecs.open("video.json","w","utf-8")
                                 json.dump(videos, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Berhasil menghapus video {}".format( str(name.lower())))
+                                cl.sendMessage(msg.to, "Berhasil menghapus video {}".format( str(name.lower())))
                             else:
-                                cl.sendText(msg.to, "Video itu tidak ada dalam list") 
+                                cl.sendMessage(msg.to, "Video itu tidak ada dalam list") 
                                  
                         elif text.lower() == "listvideo":
                            if msg._from in admin:
@@ -4373,7 +4373,7 @@ def bot(op):
                                  no += 1
                                  ret_ += str(no) + ". " + video.title() + "\n"
                              ret_ += "\nTotal「{}」Videos".format(str(len(videos)))
-                             cl.sendText(to, ret_)
+                             cl.sendMessage(to, ret_)
                              sendMention(msg.to, msg._from,"","\nJika ingin play video nya,\nSilahkan ketik nama - judul\nBisa juga ketik namanya saja")
 #=========== [ Add Video ] ============#                               
                         elif cmd.startswith("addmp3 "):
@@ -4387,9 +4387,9 @@ def bot(op):
                                 audios[str(name.lower())] = ""
                                 f = codecs.open("audio.json","w","utf-8")
                                 json.dump(audios, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Silahkan kirim mp3 nya...") 
+                                cl.sendMessage(msg.to, "Silahkan kirim mp3 nya...") 
                             else:
-                                cl.sendText(msg.to, "Mp3 itu sudah dalam list") 
+                                cl.sendMessage(msg.to, "Mp3 itu sudah dalam list") 
                                 
                         elif cmd.startswith("dellmp3 "):
                           if msg._from in admin:
@@ -4401,9 +4401,9 @@ def bot(op):
                                 del audios[str(name.lower())]
                                 f = codecs.open("audio.json","w","utf-8")
                                 json.dump(audios, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Berhasil menghapus mp3 {}".format( str(name.lower())))
+                                cl.sendMessage(msg.to, "Berhasil menghapus mp3 {}".format( str(name.lower())))
                             else:
-                                cl.sendText(msg.to, "Mp3 itu tidak ada dalam list") 
+                                cl.sendMessage(msg.to, "Mp3 itu tidak ada dalam list") 
                                  
                         elif text.lower() == "listmp3":
                            if msg._from in admin:
@@ -4413,7 +4413,7 @@ def bot(op):
                                  no += 1
                                  ret_ += str(no) + ". " + audio.title() + "\n"
                              ret_ += "\nTotal「{}」Lagu".format(str(len(audios)))
-                             cl.sendText(to, ret_)
+                             cl.sendMessage(to, ret_)
                              sendMention(msg.to, msg._from,"","\nJika ingin play mp3 nya,\nSilahkan ketik nama - judul\nBisa juga ketik namanya saja")
 #=========== [ Add Sticker ] ============#                                            
                         elif cmd.startswith("addsticker "):
@@ -4427,9 +4427,9 @@ def bot(op):
                                 stickers[str(name.lower())] = ""
                                 f = codecs.open("sticker.json","w","utf-8")
                                 json.dump(stickers, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Silahkan kirim stickernya...") 
+                                cl.sendMessage(msg.to, "Silahkan kirim stickernya...") 
                             else:
-                                cl.sendText(msg.to, "Sticker itu sudah dalam list") 
+                                cl.sendMessage(msg.to, "Sticker itu sudah dalam list") 
                                 
                         elif cmd.startswith("dellsticker "):
                           if msg._from in admin:
@@ -4440,9 +4440,9 @@ def bot(op):
                                 del stickers[str(name.lower())]
                                 f = codecs.open("sticker.json","w","utf-8")
                                 json.dump(stickers, f, sort_keys=True, indent=4, ensure_ascii=False)
-                                cl.sendText(msg.to, "Berhasil menghapus sticker {}".format( str(name.lower())))
+                                cl.sendMessage(msg.to, "Berhasil menghapus sticker {}".format( str(name.lower())))
                             else:
-                                cl.sendText(msg.to, "Sticker itu tidak ada dalam list") 
+                                cl.sendMessage(msg.to, "Sticker itu tidak ada dalam list") 
                                  
                         elif text.lower() == "liststicker":
                            if msg._from in admin:
@@ -4452,7 +4452,7 @@ def bot(op):
                                  no += 1
                                  ret_ += str(no) + ". " + sticker.title() + "\n"
                              ret_ += "\nTotal「{}」Stickers".format(str(len(stickers)))
-                             cl.sendText(to, ret_)
+                             cl.sendMessage(to, ret_)
                              
 #===========Protection============#
                         elif 'Welcome ' in msg.text:
@@ -4941,13 +4941,13 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["mentionKick"] = True
-                                cl.sendText(msg.to,"「 Status Notag 」\nNotag telah diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Notag 」\nNotag telah diaktifkan")
 
                         elif cmd == "notag off" or text.lower() == 'notag off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["mentionKick"] = False
-                                cl.sendText(msg.to,"「 Status Notag 」\nNotag telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Notag 」\nNotag telah dinonaktifkan")
 
                         elif cmd == "contact on" or text.lower() == 'contact on':
                           if wait["selfbot"] == True:
@@ -4959,67 +4959,67 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["contact"] = False
-                                cl.sendText(msg.to,"「 Status Contact 」\nDeteksi contact dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Contact 」\nDeteksi contact dinonaktifkan")
 
                         elif cmd == "respon on" or text.lower() == 'respon on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["detectMention"] = True
-                                cl.sendText(msg.to,"「 Status Respon 」\nAuto respon diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Respon 」\nAuto respon diaktifkan")
 
                         elif cmd == "respon off" or text.lower() == 'respon off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["detectMention"] = False
-                                cl.sendText(msg.to,"「 Status Respon 」\nAuto respon dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Respon 」\nAuto respon dinonaktifkan")
 
                         elif cmd == "autojoin on" or text.lower() == 'autojoin on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoJoin"] = True
-                                cl.sendText(msg.to,"「 Status Autojoin 」\nAutojoin telah diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autojoin 」\nAutojoin telah diaktifkan")
 
                         elif cmd == "autojoin off" or text.lower() == 'autojoin off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoJoin"] = False
-                                cl.sendText(msg.to,"「 Status Autojoin 」\nAutojoin telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autojoin 」\nAutojoin telah dinonaktifkan")
 
                         elif cmd == "autoleave on" or text.lower() == 'autoleave on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoLeave"] = True
-                                cl.sendText(msg.to,"「 Status Autoleave 」\nAutoleave telah diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoleave 」\nAutoleave telah diaktifkan")
 
                         elif cmd == "autoleave off" or text.lower() == 'autoleave off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoLeave"] = False
-                                cl.sendText(msg.to,"「 Status Autoleave 」\nAutoleave telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoleave 」\nAutoleave telah dinonaktifkan")
 
                         elif cmd == "autoblock on" or text.lower() == 'autoblock on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoBlock"] = True
-                                cl.sendText(msg.to,"「 Status Autoleave 」\nAutoleave telah diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoleave 」\nAutoleave telah diaktifkan")
 
                         elif cmd == "autoblock off" or text.lower() == 'autoblock off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoBlock"] = False
-                                cl.sendText(msg.to,"「 Status Autoleave 」\nAutoleave telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoleave 」\nAutoleave telah dinonaktifkan")
 
                         elif cmd == "autoadd on" or text.lower() == 'autoadd on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoAdd"] = True
-                                cl.sendText(msg.to,"「 Status Autoadd 」\nAutoadd telah diaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoadd 」\nAutoadd telah diaktifkan")
 
                         elif cmd == "autoadd off" or text.lower() == 'autoadd off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoAdd"] = False
-                                cl.sendText(msg.to,"「 Status Autoadd 」\nAutoadd telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Autoadd 」\nAutoadd telah dinonaktifkan")
 
                         elif cmd == "sticker on" or text.lower() == 'sticker on':
                           if wait["selfbot"] == True:
@@ -5031,7 +5031,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["stickerOn"] = False
-                                cl.sendText(msg.to,"「 Status Sticker Check 」\nSticker check dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Sticker Check 」\nSticker check dinonaktifkan")
 
                         elif cmd == "jointicket on" or text.lower() == 'jointicket on':
                           if wait["selfbot"] == True:
@@ -5043,7 +5043,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["autoJoinTicket"] = False
-                                cl.sendText(msg.to,"「 Status Jointicket 」\nJointicket telah dinonaktifkan")
+                                cl.sendMessage(msg.to,"「 Status Jointicket 」\nJointicket telah dinonaktifkan")
                                 
                         elif cmd == "kick on":
                           if wait["selfbot"] == True:
