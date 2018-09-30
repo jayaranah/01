@@ -520,7 +520,7 @@ def atend():
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "Owner:\n\n" + \
+    helpMessage = "━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Me\n" + \
                   "♦ " + key + "Mid「@」\n" + \
                   "♦ " + key + "Steal「@」\n" + \
@@ -565,7 +565,7 @@ def help():
                   "♦ " + key + "Setkey「New Key」\n" + \
                   "♦ " + key + "Mykey\n" + \
                   "♦ " + key + "Resetkey\n" + \
-                  "\n     ♦ MEDIA ♦\n\n" + \
+                  "\n━━━━━━━━━━━━━━━━━\n   ♦ MEDIA ♦\n━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Kode wilayah\n" + \
                   "♦ " + key + "Listmp3\n" + \
                   "♦ " + key + "Listvideo\n" + \
@@ -604,7 +604,7 @@ def help():
                   "♦ " + key + "Get-lirik「Judul Lagu」\n" + \
                   "♦ " + key + "Get-instagram「User Name」\n" + \
                   "♦ " + key + "Get-date「tgl-bln-thn」\n" + \
-                  "\n     ♦PROTECTION♦\n\n" + \
+                  "\n━━━━━━━━━━━━━━━━━\n   ♦PROTECTION♦\n━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Notag「on/off」\n" + \
                   "♦ " + key + "Allprotect「on/off」\n" + \
                   "♦ " + key + "Protecturl「on/off」\n" + \
@@ -612,7 +612,7 @@ def help():
                   "♦ " + key + "Protectkick「on/off」\n" + \
                   "♦ " + key + "Protectinvite「on/off」\n" + \
                   "♦ " + key + "Protectcancel「on/off」\n" + \
-                  "\n     ♦SETTING♦\n\n" + \
+                  "\n━━━━━━━━━━━━━━━━━\n   ♦SETTING♦\n━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Invite「on/off」\n" + \
                   "♦ " + key + "Sticker「on/off」\n" + \
                   "♦ " + key + "Unsend「on/off」\n" + \
@@ -624,7 +624,7 @@ def help():
                   "♦ " + key + "Welcome「on/off」\n" + \
                   "♦ " + key + "Autoleave「on/off」\n" + \
                   "♦ " + key + "Jointicket「on/off」\n" + \
-                  "\n     ♦ADMIN♦\n\n" + \
+                  "\n━━━━━━━━━━━━━━━━━\n   ♦ADMIN♦\n━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Bot:on\n" + \
                   "♦ " + key + "Bot:expell\n" + \
                   "♦ " + key + "Staff:on\n" + \
@@ -641,13 +641,13 @@ def help():
                   "♦ " + key + "Listbot\n" + \
                   "♦ " + key + "Listadmin\n" + \
                   "♦ " + key + "Listprotect\n" + \
-                  "\n    ♦ http://line.me/ti/p/~ar-bots♦\n"
+                  "\n━━━━━━━━━━━━━━━━━\n♦ http://line.me/ti/p/~ar-bots♦\n━━━━━━━━━━━━━━━━━\n"
     return helpMessage
 
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "• Gunakan「 " + key + " 」di depannya\n\n" + \
+    helpMessage1 = "━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Blc\n" + \
                   "♦ " + key + "Ban:on\n" + \
                   "♦ " + key + "Unban:on\n" + \
@@ -661,7 +661,7 @@ def helpbot():
                   "♦ " + key + "Talkbanlist\n" + \
                   "♦ " + key + "Clearban\n" + \
                   "♦ " + key + "Refresh\n" + \
-                  "\n      ♦CHEK SETTING♦\n\n" + \
+                  "\n━━━━━━━━━━━━━━━━━\n   ♦CHEK SETTING♦\n━━━━━━━━━━━━━━━━━\n\n" + \
                   "♦ " + key + "Cek sider\n" + \
                   "♦ " + key + "Cek spam\n" + \
                   "♦ " + key + "Cek pesan \n" + \
@@ -687,7 +687,7 @@ def helpbot():
                   "♦ " + key + "Bot5up「Kirim fotonya」\n" + \
                   "♦ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
                   "♦ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
-                  "\n      ♦http://line.me/ti/p/~ar-bots♦\n"
+                  "\n━━━━━━━━━━━━━━━━━\n♦http://line.me/ti/p/~ar-bots♦\n━━━━━━━━━━━━━━━━━\n"
     return helpMessage1
 
 def bot(op):
