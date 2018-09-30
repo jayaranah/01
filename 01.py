@@ -586,7 +586,7 @@ def help():
                   "♦ " + key + "Ytmp3:「Judul Lagu」\n" + \
                   "♦ " + key + "Ytmp4:「Judul Video」\n" + \
                   "♦ " + key + "Musik「Nama Penyanyi」\n" + \
-                  "♦ " + key + "Get-fs「Query」\n" + \
+                  "♦ " + key + "smule 「Link」\n" + \
                   "♦ " + key + "Get-line「ID Line」\n" + \
                   "♦ " + key + "Get-apk「Query」\n" + \
                   "♦ " + key + "Get-gif「Query」\n" + \
@@ -773,12 +773,14 @@ def bot(op):
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         cl.acceptGroupInvitation(op.param1)
                         ginfo = cl.getGroup(op.param1)
-                        cl.sendMessage(op.param1,"Sorry anda bukan admin selfbot\nSelamat tinggal " +str(ginfo.name))
+                        cl.sendMessage(op.param1,"maaf ya aq leave dari " +str(ginfo.name))
+                        cl.sendMessage(op.param1,"kalau mau invite silahkan hubungi kontak di bawah")
+                        cl.sendContact(op.param1,"u48b4ebd2407c6bb88df30b2645ddaa96")			
                         cl.leaveGroup(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                        ginfo = cl.getGroup(op.param1)
-                        cl.sendMessage(op.param1,"Hai " + str(ginfo.name))
+                        #ginfo = cl.getGroup(op.param1)
+                        #cl.sendMessage(op.param1,"Hai " + str(ginfo.name))
 
         if op.type == 13:
             if mid in op.param3:
@@ -899,9 +901,9 @@ def bot(op):
         if op.type == 5:
               if wait["autoAdd"] == True:
                   cl.findAndAddContactsByMid(op.param1)
-                  sendMention(op.param1, op.param1, "Haii ", ", terimakasih sudah add saya")
-                  cl.sendText(op.param1, wait["message"])
-                  cl.sendContact(op.param1, "u0237b0ec326fc36a91743df4a1ad2591")
+                  sendMention(op.param1, op.param1, "nah kah  ", ", ketahuan lg add")
+                  cl.sendMessage(op.param1, wait["message"])
+                  cl.sendContact(op.param1, "u48b4ebd2407c6bb88df30b2645ddaa96")
 
         if op.type == 5:
             print ("[ 5 ] NOTIFIED AUTO BLOCK CONTACT")
@@ -2922,7 +2924,7 @@ def bot(op):
                                 sw.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
-                        elif cmd == "mention1" or text.lower() == '😆':
+                        elif cmd == "pangil" or text.lower() == '😆':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                group = cl.getGroup(msg.to)
@@ -2990,61 +2992,6 @@ def bot(op):
                                        nm4 += [nama[l]]
                                    mentionMembers(msg.to, nm4)
                                    for m in range (80, 100):
-                                       nm5 += [nama[m]]
-                                   mentionMembers(msg.to, nm5)
-
-                        elif cmd == "tagall" or text.lower() == 'tagall':
-                          if wait["selfbot"] == True:
-                            if msg._from in admin:
-                               group = cl.getGroup(msg.to)
-                               nama = [contact.mid for contact in group.members]
-                               nm1, nm2, nm3, nm4, jml = [], [], [], [], len(nama)
-                               if jml <= 100:
-                                   mentionMembers(msg.to, nama)
-                               if jml > 100 and jml < 200:
-                                   for i in range (0, 99):
-                                       nm1 += [nama[i]]
-                                   mentionMembers(msg.to, nm1)
-                                   for j in range (100, len(nama)-1):
-                                       nm2 += [nama[j]]
-                                   mentionMembers(msg.to, nm2)
-                               if jml > 200 and jml < 300:
-                                   for i in range (0, 99):
-                                       nm1 += [nama[i]]
-                                   mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
-                                       nm2 += [nama[j]]
-                                   mentionMembers(msg.to, nm2)
-                                   for k in range (200, len(nama)-1):
-                                       nm3 += [nama[k]]
-                                   mentionMembers(msg.to, nm3)
-                               if jml > 300 and jml < 400:
-                                   for i in range (0, 99):
-                                       nm1 += [nama[i]]
-                                   mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
-                                       nm2 += [nama[j]]
-                                   mentionMembers(msg.to, nm2)
-                                   for k in range (200, 299):
-                                       nm3 += [nama[k]]
-                                   mentionMembers(msg.to, nm3)
-                                   for l in range (300, len(nama)-1):
-                                       nm4 += [nama[l]]
-                                   mentionMembers(msg.to, nm4)
-                               if jml > 400 and jml < 500:
-                                   for i in range (0, 99):
-                                       nm1 += [nama[i]]
-                                   mentionMembers(msg.to, nm1)
-                                   for j in range (100, 199):
-                                       nm2 += [nama[j]]
-                                   mentionMembers(msg.to, nm2)
-                                   for k in range (200, 299):
-                                       nm3 += [nama[k]]
-                                   mentionMembers(msg.to, nm3)
-                                   for l in range (300, 399):
-                                       nm4 += [nama[l]]
-                                   mentionMembers(msg.to, nm4)
-                                   for m in range (400, len(nama)-1):
                                        nm5 += [nama[m]]
                                    mentionMembers(msg.to, nm5)
 
@@ -3480,13 +3427,13 @@ def bot(op):
                                     yyk = mp3['href']
                                     aud = yyk.replace("https://adf.ly/7737506/","")
                                     audio = aud.replace("\n","")
-                                    cl.sendMessage(to,"Type~Audio\njudul~"+ret_+"\n\nLoading...")
+                                    cl.sendMessage(to,"♦Type: Audio\n♦judul: "+ret_+"\nLoading...")
                                     cl.sendAudioWithURL(msg.to, audio)
                                 else:
                                     mp4 = data.select("a[href*=7737506]")[1]
                                     yoyok = mp4['href']
                                     video = yoyok.replace("https://adf.ly/7737506/","")
-                                    cl.sendMessage(to,"Type~Video\njudul~"+ret_+"\n\nLoading...")
+                                    cl.sendMessage(to,"♦Type:Video\n♦judul: "+ret_+"\n\nLoading...")
                                     cl.sendVideoWithURL(msg.to,video)					
  
                         elif cmd.startswith("get-fs "):
