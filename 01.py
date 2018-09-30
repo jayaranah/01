@@ -276,7 +276,7 @@ def mentionMembers(to, mid):
             textx += mention
             if no < len(mid):
                 no += 1
-                textx += "「✭」{}. ".format(str(no))
+                textx += "「♦」{}. ".format(str(no))
             else:
                 textx += "\n「 Total {} Member 」".format(str(len(mid)))
         cl.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
@@ -521,50 +521,50 @@ def help():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage = "• Gunakan「 " + key + " 」di depannya\n\n" + \
-                  "「✭」 " + key + "Me\n" + \
-                  "「✭」 " + key + "Mid「@」\n" + \
-                  "「✭」 " + key + "Steal「@」\n" + \
-                  "「✭」 " + key + "Cover「@」\n" + \
-                  "「✭」 " + key + "Nk「@」\n" + \
-                  "「✭」 " + key + "Kick「@」\n" + \
-                  "「✭」 " + key + "Clone「@」\n" + \
-                  "「✭」 " + key + "Restore\n" + \
-                  "「✭」 " + key + "Reject\n" + \
-                  "「✭」 " + key + "Mybot\n" + \
-                  "「✭」 " + key + "Setting\n" + \
-                  "「✭」 " + key + "About\n" + \
-                  "「✭」 " + key + "Restart\n" + \
-                  "「✭」 " + key + "Runtime\n" + \
-                  "「✭」 " + key + "Creator\n" + \
-                  "「✭」 " + key + "Speed/Sp\n" + \
-                  "「✭」 " + key + "Respontime\n" + \
-                  "「✭」 " + key + "Tagall\n" + \
-                  "「✭」 " + key + "Joinall\n" + \
-                  "「✭」 " + key + "Byeall\n" + \
-                  "「✭」 " + key + "Bye me\n" + \
-                  "「✭」 " + key + "Leave「Namagrup」\n" + \
-                  "「✭」 " + key + "Ginfo\n" + \
-                  "「✭」 " + key + "Open\n" + \
-                  "「✭」 " + key + "Close\n" + \
-                  "「✭」 " + key + "Url\n" + \
-                  "「✭」 " + key + "Gruplist\n" + \
-                  "「✭」 " + key + "Open「nomer」\n" + \
-                  "「✭」 " + key + "Close「nomer」\n" + \
-                  "「✭」 " + key + "Infogrup「nomer」\n" + \
-                  "「✭」 " + key + "Infomem「nomer」\n" + \
-                  "「✭」 " + key + "Joinall「nomer」\n" + \
-                  "「✭」 " + key + "Leaveall「nomer」\n" + \
-                  "「✭」 " + key + "Remove chat\n" + \
-                  "「✭」 " + key + "Lurking「on/off」\n" + \
-                  "「✭」 " + key + "Lurkers\n" + \
-                  "「✭」 " + key + "Sider「on/off」\n" + \
-                  "「✭」 " + key + "Updatefoto\n" + \
-                  "「✭」 " + key + "Updategrup\n" + \
-                  "「✭」 " + key + "Updatebot\n" + \
-                  "「✭」 " + key + "Broadcast:「Text」\n" + \
-                  "「✭」 " + key + "Setkey「New Key」\n" + \
-                  "「✭」 " + key + "Mykey\n" + \
-                  "「✭」 " + key + "Resetkey\n" + \
+                  "♦ " + key + "Me\n" + \
+                  "♦ " + key + "Mid「@」\n" + \
+                  "♦ " + key + "Steal「@」\n" + \
+                  "♦ " + key + "Cover「@」\n" + \
+                  "♦ " + key + "Nk「@」\n" + \
+                  "♦ " + key + "Kick「@」\n" + \
+                  "♦ " + key + "Clone「@」\n" + \
+                  "♦ " + key + "Restore\n" + \
+                  "♦ " + key + "Reject\n" + \
+                  "♦ " + key + "Mybot\n" + \
+                  "♦ " + key + "Setting\n" + \
+                  "♦ " + key + "About\n" + \
+                  "♦ " + key + "Restart\n" + \
+                  "♦ " + key + "Runtime\n" + \
+                  "♦ " + key + "Creator\n" + \
+                  "♦ " + key + "Speed/Sp\n" + \
+                  "♦ " + key + "Respontime\n" + \
+                  "♦ " + key + "Tagall\n" + \
+                  "♦ " + key + "Joinall\n" + \
+                  "♦ " + key + "Byeall\n" + \
+                  "♦ " + key + "Bye me\n" + \
+                  "♦ " + key + "Leave「Namagrup」\n" + \
+                  "♦ " + key + "Ginfo\n" + \
+                  "♦ " + key + "Open\n" + \
+                  "♦ " + key + "Close\n" + \
+                  "♦ " + key + "Url\n" + \
+                  "♦ " + key + "Gruplist\n" + \
+                  "♦ " + key + "Open「nomer」\n" + \
+                  "♦ " + key + "Close「nomer」\n" + \
+                  "♦ " + key + "Infogrup「nomer」\n" + \
+                  "♦ " + key + "Infomem「nomer」\n" + \
+                  "♦ " + key + "Joinall「nomer」\n" + \
+                  "♦ " + key + "Leaveall「nomer」\n" + \
+                  "♦ " + key + "Remove chat\n" + \
+                  "♦ " + key + "Lurking「on/off」\n" + \
+                  "♦ " + key + "Lurkers\n" + \
+                  "♦ " + key + "Sider「on/off」\n" + \
+                  "♦ " + key + "Updatefoto\n" + \
+                  "♦ " + key + "Updategrup\n" + \
+                  "♦ " + key + "Updatebot\n" + \
+                  "♦ " + key + "Broadcast:「Text」\n" + \
+                  "♦ " + key + "Setkey「New Key」\n" + \
+                  "♦ " + key + "Mykey\n" + \
+                  "♦ " + key + "Resetkey\n" + \
                   "\n「 Turn In Media 」\n• Use「 " + key + " 」di depannya\n\n" + \
                   "「✭」 " + key + "Kode wilayah\n" + \
                   "「✭」 " + key + "Listmp3\n" + \
@@ -1849,7 +1849,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Selfbot Command 」\n• User : "
+                                xpesan =  "•TEAM:♦α૨ ƒαɱเℓყ  \n•Nama : "
                                 ret_ = str(helpMessage)
                                 ry = str(ryan.displayName)
                                 pesan = ''
@@ -1870,7 +1870,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Setting Blacklist 」\n• User : "
+                                xpesan =  "•TEAM:♦α૨ ƒαɱเℓყ \n•Nama : "
                                 ret_ = str(helpMessage1)
                                 ry = str(ryan.displayName)
                                 pesan = ''
@@ -1888,7 +1888,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "\n「Settings List Protection」\n"
+                                md = "\n♦LIST SETTING PROTECTION♦\n"
                                 if wait["mentionKick"] == True: md+="「✭」 Notag「ON」\n"
                                 else: md+="「✭」 Notag「OFF」\n"
                                 if wait["stickerOn"] == True: md+="「✭」 Sticker「ON」\n"
@@ -1932,7 +1932,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Selfbot Settings 」\n• User : "
+                                xpesan =  "•TEAM:♦α૨ ƒαɱเℓყ \n• nama : "
                                 ret_ = "• Group : {}\n".format(str(ginfo.name))
                                 ret_ += str(md)
                                 ry = str(ryan.displayName)
@@ -1948,8 +1948,8 @@ def bot(op):
                                 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"「Created by :  Oz.♋️ 」") 
-                                ma = ""
+                                cl.sendMessage(msg.to,"♦α૨ ƒαɱเℓყ") 
+                                ma = "u48b4ebd2407c6bb88df30b2645ddaa96"
                                 for i in creator:
                                     ma = cl.getContact(i)
                                     cl.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
@@ -1975,22 +1975,22 @@ def bot(op):
                                 eltime = time.time() - mulai
                                 bot = runtime(eltime)
                                 start = time.time()
-                                sw.sendText("u054c3692f90083a5b1ad23e4a663f676", '.')
+                                cl.sendMessage("u054c3692f90083a5b1ad23e4a663f676", '.')
                                 elapsed_time = time.time() - start
                                 ryan = cl.getContact(mid)
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Informasi Selfbot 」\n• User : "
+                                xpesan =  "•AR SELF\n• Nama : "
                                 ret_ = "• Group : {} Group".format(str(len(grouplist)))
-                                ret_ += "\n• Friend : {} Friend".format(str(len(contactlist)))
-                                ret_ += "\n• Blocked : {} Blocked".format(str(len(blockedlist)))
+                                ret_ += "\n• Teman : {} Teman".format(str(len(contactlist)))
+                                ret_ += "\n• Blokir : {} Blokir".format(str(len(blockedlist)))
                                 ret_ += "\n• Favorite : {} Favorite".format(str(len(favoritelist)))
-                                ret_ += "\n• Version : 「Self Bots 」"
+                                ret_ += "\n• Version : AR SELFBOT"
                                 ret_ += "\n• Expired : {} - {} - {}".format(str(hr), str(bln), str(thn))
                                 ret_ += "\n• In days : {} again".format(days)
-                                ret_ += "\n「 Speed Respon 」\n• {} detik".format(str(elapsed_time))
-                                ret_ += "\n「 Selfbot Runtime 」\n• {}".format(str(bot))
+                                ret_ += "\nKecepatan\n• {} detik".format(str(elapsed_time))
+                                ret_ += "\nwaktu aktiv\n• {}".format(str(bot))
                                 ry = str(ryan.displayName)
                                 pesan = ''
                                 pesan2 = pesan+"@x \n"
@@ -2001,14 +2001,14 @@ def bot(op):
                                 zxc += pesan2
                                 text = xpesan + zxc + ret_ + ""
                                 cl.sendMessage(to, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
-                                cl.sendContact(to, "u054c3692f90083a5b1ad23e4a663f676")
+                                cl.sendContact(to, "u48b4ebd2407c6bb88df30b2645ddaa96")
                             except Exception as e:
                                 cl.sendMessage(msg.to, str(e))
 
-                        elif cmd == "me" or text.lower() == 'me':
+                        elif cmd == "aku" or text.lower() == 'me':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 User Selfbot 」\n", "")
+                               sendMention(msg.to, sender, " ", "")
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
                                cl.sendMessage1(msg)
@@ -2201,7 +2201,7 @@ def bot(op):
                         elif cmd == "restart":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Restarting 」\nUser ", "\nTunggu sebentar...")
+                               sendMention(msg.to, sender, "memperbarui \Nama ", "\nTunggu sebentar...")
                                Setmain["restartPoint"] = msg.to
                                restartBot()
                             
@@ -2214,7 +2214,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Runtime 」\n• User Self : "
+                                xpesan =  " Runtime \n• Nama : "
                                 ret_ = "• {}".format(str(bot))
                                 ry = str(ryan.displayName)
                                 pesan = ''
@@ -2801,25 +2801,25 @@ def bot(op):
                             if msg._from in admin:
                               if msg.toType == 2:
                                 settings["groupPicture"] = True
-                                cl.sendText(msg.to,"Kirim fotonya.....")
+                                cl.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "updatebot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
-                                cl.sendText(msg.to,"Kirim fotonya.....")
+                                cl.sendMessage(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["foto"][mid] = True
-                                cl.sendText(msg.to,"Kirim fotonya.....")
+                                cl.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "cvp":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["video"][mid] = True
-                                cl.sendText(msg.to,"Kirim videonya.....")
+                                cl.sendMessage(msg.to,"Kirim videonya.....")
                                 
                         elif cmd == "bot1up":
                             if msg._from in admin:
@@ -2859,7 +2859,7 @@ def bot(op):
                                 profile = cl.getProfile()
                                 profile.displayName = string
                                 cl.updateProfile(profile)
-                                cl.sendMessage(msg.to,"Nama diganti jadi " + string + "")
+                                cl.sendMessage(msg.to,"Berhasi ganti nama, " + string + "")
 
                         elif cmd.startswith("bot1name: "):
                           if msg._from in admin:
@@ -3007,7 +3007,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     mc += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                cl.sendMessage(msg.to,"「 Daftar Admin 」\n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」Pengguna Selfbot" %(str(len(owner)+len(admin)+len(staff))))
+                                cl.sendMessage(msg.to," Daftar Admin \n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」Pengguna Selfbot" %(str(len(owner)+len(admin)+len(staff))))
 
                         elif cmd == "listprotect":
                           if wait["selfbot"] == True:
@@ -3363,7 +3363,7 @@ def bot(op):
                                             ret_ += "\n {}. {}".format(str(num), str(res['title']))
                                         ret_ += "\n\n Total {} Result".format(str(len(data["respons"])))
                                         cl.sendMessage(msg.to, str(ret_))
-                                        cl.sendText(to, "Ketik Get-yt {} | angka\nuntuk melihat detail lagu".format(str(search)))
+                                        cl.sendMessage(to, "Ketik Get-yt {} | angka\nuntuk melihat detail lagu".format(str(search)))
                                 if len(cond) == 2:
                                     num = int(cond[1])
                                     if num <= len(data["respons"]):
