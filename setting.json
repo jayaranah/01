@@ -35,16 +35,14 @@
     "detectMention": false,
     "autoread": false,
     "autoscan": false,
-    "blacklist": {
-        "u5a0b4bb5d3a6d48aca8473326062af75": true
-    },
+    "blacklist": {},
     "dblacklist": false,
     "foto": {},
     "greet": {},
     "limit": 1,
     "message": "Hallo~",
     "message1": "Hey~",
-    "allprotect": true,
+    "allprotect": false,
     "readMember": {},
     "readPoint": {},
     "wblacklist": false
