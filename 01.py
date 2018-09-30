@@ -3391,6 +3391,31 @@ def bot(op):
                                             cl.sendImageWithURL(msg.to,cover)
                                             cl.sendMessage(msg.to, str(ret_))
                                             cl.sendAudioWithURL(msg.to,audio)
+                        elif cmd.startswith("smule "):
+                            if '/' in text:
+                                sep = text.split(".com/")
+                                x = len(sep)
+                                smule = sep[x - 1]
+                            with requests.session() as s:
+                                s.headers['user-agent'] = 'Mozilla/5.0'
+                                r = s.get("https://www.smuledownloader.download/{}".format(str(smule)))
+                                data = BeautifulSoup(r.content, 'html5lib')
+                                ret = data.select("div#videodl > p")[0].text
+                                for title in data.findAll('div', attrs={'class':'container ptb'}):
+                                    ret_ = title.find('h1').text
+                                if 'No Video File' in ret:
+                                    mp3 = data.select("a[href*=7737506]")[0]
+                                    yyk = mp3['href']
+                                    aud = yyk.replace("https://adf.ly/7737506/","")
+                                    audio = aud.replace("\n","")
+                                    client.sendMessage(to,"Type~Audio\njudul~"+ret_+"\n\nLoading...")
+                                    client.sendAudioWithURL(msg.to, audio)
+                                else:
+                                    mp4 = data.select("a[href*=7737506]")[1]
+                                    yoyok = mp4['href']
+                                    video = yoyok.replace("https://adf.ly/7737506/","")
+                                    client.sendMessage(to,"Type~Video\njudul~"+ret_+"\n\nLoading...")
+                                    client.sendVideoWithURL(msg.to,video)					
  
                         elif cmd.startswith("get-fs "):
                           if msg._from in admin:
